@@ -1,3 +1,0 @@
-git lfs install
-git lfs track ".rds"
-git add .gitattributes
