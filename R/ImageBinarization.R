@@ -1,8 +1,11 @@
 ####This program uses the neural network described in the paper to turn raw images into binary ####
 ####images. Here, we first resize the raw image to 384x384 pixels, but this is not necessary.  ####
 ####Note, however, that larger images will take longer to construct binary images.             ####
+library(keras)
 
-mlp<-load_model_hdf5("Results/MLP6.hdf5") #read in model (can also use NeuralNetworkTraining.R
+mlp<-load_model_hdf5("Results/MLP6.hdf5") #read in model - note that this model is in the github
+                                          #files and needs to be read in
+                                          #(you can also use NeuralNetworkTraining.R
                                           #to train the model on your own machine)
 
 img.test<-resize(readPNG("Images/ExImg1.png"),384,384)  #read in and resize image
